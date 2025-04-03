@@ -22,7 +22,7 @@ public class LivroController {
     @GetMapping("/{id:\\d+}")
     public String detalharLivro(@PathVariable Long id, Model model) {
         model.addAttribute("livro", livroService.buscarPorId(id));
-        return "livros/detalhar";
+        return "livros/detalhes";
     }
 
     @GetMapping("/novo")
